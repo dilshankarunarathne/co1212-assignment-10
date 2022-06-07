@@ -16,7 +16,12 @@ public class Stack {
     }
 
     public Character pop() {
-
-        return null;
+        size = queue.getSize();
+        int i = 0;
+        while (true) {
+            if (i == size) return queue.dequeue();
+            queue.enqueue(queue.dequeue());
+            i ++ ;
+        }
     }
 }
