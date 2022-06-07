@@ -8,4 +8,10 @@ public class Stack {
     public Stack() {
         queue = new CharQueue();
     }
+
+    public void push(char c) {
+
+    }
+
+    
 }
