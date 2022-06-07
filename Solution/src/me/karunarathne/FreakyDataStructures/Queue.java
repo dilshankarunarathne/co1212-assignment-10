@@ -10,8 +10,10 @@ public class Queue {
     }
 
     public void enqueue(char c) {
+        CharStack oldStack = stack;
         stack = new CharStack();
-
+        stack.push(c);
+        copyAllFrom(oldStack);
     }
 
     public Character dequeue() {
