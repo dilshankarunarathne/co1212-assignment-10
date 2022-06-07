@@ -8,4 +8,8 @@ public class Queue {
     public Queue() {
         stack = new CharStack();
     }
+
+    public void enqueue(char c) {
+        
+    }
 }
