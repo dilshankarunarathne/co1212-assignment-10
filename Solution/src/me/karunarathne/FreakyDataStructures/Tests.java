@@ -8,17 +8,17 @@ public class Tests {
 
     private static void newQueueTests() {
         System.out.println("Queue made of a Stack");
-        Queue queue = new Queue();
+        Queue queue = new Queue(true);
         queue.enqueue('a');
         queue.enqueue('b');
         queue.enqueue('c');
         queue.enqueue('d');
         queue.enqueue('e');
-        queue.display();
-        System.out.println("");
+//        queue.display();
+//        System.out.println("");
         queue.dequeue();
         queue.dequeue();
-        queue.display();
+//        queue.display();
         System.out.println("\n\n");
     }
 
@@ -30,11 +30,11 @@ public class Tests {
         stack.push('c');
         stack.push('d');
         stack.push('e');
-        stack.display();
-        System.out.println("");
+//        stack.display();
+//        System.out.println("");
         stack.pop();
         stack.pop();
-        stack.display();
+//        stack.display();
         System.out.println("\n\n");
     }
 }

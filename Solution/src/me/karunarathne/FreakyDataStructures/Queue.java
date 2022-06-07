@@ -15,12 +15,13 @@ public class Queue {
     public Queue(boolean logging) {
         this();
         debug = logging;
+        if (debug) System.out.println("Operation \tChar \tSize\tCurrent State");
     }
 
     public void enqueue(char c) {
         stack.push(c);
         size ++ ;
-        if (debug) System.out.println("push (" + c + ") -> " + toString());
+        if (debug) System.out.println("enqueue \t(" + c + ") -> " + this);
     }
 
     public Character dequeue() {
@@ -37,6 +38,7 @@ public class Queue {
         }
 
         size -- ;
+        if (debug) System.out.println("dequeue \t(" + c + ") <- " + this);
         return c;
     }
 
@@ -56,8 +58,18 @@ public class Queue {
 
     @Override
     public String toString() {
-        String s = "\t(" + size + ")[";
-        
+        String s = "\t  " + size + " \t[ ";
+
+        CharStack aux = new CharStack();
+        int tempSize = stack.getSize();
+        for (int i=0; i<tempSize; i++) {
+            char c = move(stack, aux);
+            s = s + c + " ";
+        }
+        for (int i=0; i<tempSize; i++) {
+            char c = move(aux, stack);
+        }
+
         s = s + "]";
         return s;
     }
