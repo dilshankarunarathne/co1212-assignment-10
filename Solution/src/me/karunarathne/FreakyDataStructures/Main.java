@@ -7,7 +7,7 @@ public class Main {
     }
 
     private static void newQueueTests() {
-        System.out.println("\n----------------------\nQueue made of a Stack");
+        System.out.println("Queue made of a Stack");
         Queue queue = new Queue();
         queue.enqueue('a');
         queue.enqueue('b');
@@ -15,15 +15,15 @@ public class Main {
         queue.enqueue('d');
         queue.enqueue('e');
         queue.display();
-        System.out.println("-------");
+        System.out.println("");
         queue.dequeue();
         queue.dequeue();
         queue.display();
-        System.out.println("-------");
+        System.out.println("\n\n");
     }
 
     private static void newStackTests() {
-        System.out.println("\n----------------------\nStack made of a Queue");
+        System.out.println("Stack made of a Queue");
         Stack stack = new Stack();
         stack.push('a');
         stack.push('b');
@@ -31,10 +31,10 @@ public class Main {
         stack.push('d');
         stack.push('e');
         stack.display();
-        System.out.println("-------");
+        System.out.println("");
         stack.pop();
         stack.pop();
         stack.display();
-        System.out.println("-------");
+        System.out.println("\n\n");
     }
 }
