@@ -24,17 +24,17 @@ public class Tests {
 
     private static void newStackTests() {
         System.out.println("Stack made of a Queue");
-        Stack stack = new Stack();
+        Stack stack = new Stack(true);
         stack.push('a');
         stack.push('b');
         stack.push('c');
         stack.push('d');
         stack.push('e');
-//        stack.display();
-//        System.out.println("");
+        stack.display();
+        System.out.println("");
         stack.pop();
         stack.pop();
-//        stack.display();
+        stack.display();
         System.out.println("\n\n");
     }
 }

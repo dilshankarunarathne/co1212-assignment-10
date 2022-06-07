@@ -1,22 +1,44 @@
 package me.karunarathne.FreakyDataStructures;
 
 import me.karunarathne.NormalDataStructures.CharQueue;
-import me.karunarathne.NormalDataStructures.CharStack;
 
 public class Stack {
     private final CharQueue queue;
     private int size;
+    private boolean debug = false;
 
     public Stack() {
         queue = new CharQueue();
         size = 0;
     }
 
-    
+    public Stack(boolean logging) {
+        queue = new CharQueue();
+        size = 0;
+        this.debug = logging;
+        if (debug) System.out.println("Operation \tChar \tSize\tCurrent State");
+    }
 
     public void push(char c) {
+//        if (debug) System.out.println("push \t(" + c + ") -> " + this);
         queue.enqueue(c);
     }
+
+//    public Character pop() {
+//        size = queue.getSize();
+//        int i = 0;
+//        char ch;
+//        while (true) {
+//            if (i == size-1) {
+//                ch = queue.dequeue();
+//                break;
+//            }
+//            queue.enqueue(queue.dequeue());
+//            i ++ ;
+//        }
+//        if (debug) System.out.println("dequeue \t(" + ch + ") <- " + this);
+//        return ch;
+//    }
 
     public Character pop() {
         size = queue.getSize();
