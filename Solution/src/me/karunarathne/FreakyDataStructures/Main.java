@@ -7,6 +7,7 @@ public class Main {
     }
 
     private static void newQueueTests() {
+        System.out.println("\n----------------------\nQueue made of a Stack");
         Queue queue = new Queue();
         queue.enqueue('a');
         queue.enqueue('b');
@@ -22,6 +23,7 @@ public class Main {
     }
 
     private static void newStackTests() {
+        System.out.println("\n----------------------\nStack made of a Queue");
         Stack stack = new Stack();
         stack.push('a');
         stack.push('b');
