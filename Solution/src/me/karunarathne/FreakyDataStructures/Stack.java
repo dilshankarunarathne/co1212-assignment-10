@@ -28,7 +28,9 @@ public class Stack {
     public void display() {
         size = queue.getSize();
         for (int i=0; i<size; i++) {
-            
+            char c = queue.dequeue();
+            queue.enqueue(c);
+            System.out.print(c + " ");
         }
     }
 }
