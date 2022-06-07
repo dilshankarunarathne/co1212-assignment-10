@@ -9,5 +9,9 @@ public class Main {
         stack.push('d');
         stack.push('e');
         stack.display();
+        System.out.println("-------");
+        stack.pop();
+        stack.pop();
+        stack.display();
     }
 }
