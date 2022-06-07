@@ -3,14 +3,15 @@ package me.karunarathne.FreakyDataStructures;
 import me.karunarathne.NormalDataStructures.CharStack;
 
 public class Queue {
-    private final CharStack stack;
+    private CharStack stack;
 
     public Queue() {
         stack = new CharStack();
     }
 
     public void enqueue(char c) {
-        
+        stack = new CharStack();
+
     }
 
     public Character dequeue() {
