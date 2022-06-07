@@ -2,7 +2,7 @@ package me.karunarathne.FreakyDataStructures;
 
 public class Main {
     public static void main(String[] args) {
-//        newStackTests();
+        newStackTests();
         newQueueTests();
     }
 
@@ -18,6 +18,7 @@ public class Main {
         queue.dequeue();
         queue.dequeue();
         queue.display();
+        System.out.println("-------");
     }
 
     private static void newStackTests() {
@@ -32,5 +33,6 @@ public class Main {
         stack.pop();
         stack.pop();
         stack.display();
+        System.out.println("-------");
     }
 }
