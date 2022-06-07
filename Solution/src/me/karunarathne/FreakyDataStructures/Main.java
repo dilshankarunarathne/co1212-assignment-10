@@ -7,6 +7,12 @@ public class Main {
     }
 
     private static void newQueueTests() {
+        Queue queue = new Queue();
+        queue.enqueue('a');
+        queue.enqueue('b');
+        queue.enqueue('c');
+        queue.enqueue('d');
+        queue.enqueue('e');
     }
 
     private static void newStackTests() {
