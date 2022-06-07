@@ -2,6 +2,10 @@ package me.karunarathne.FreakyDataStructures;
 
 public class Main {
     public static void main(String[] args) {
+        newStackTests();
+    }
+
+    private static void newStackTests() {
         Stack stack = new Stack();
         stack.push('a');
         stack.push('b');
