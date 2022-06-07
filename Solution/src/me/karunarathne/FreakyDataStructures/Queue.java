@@ -38,8 +38,7 @@ public class Queue {
 
         int tempSize = stack.getSize();
         for (int i=0; i<tempSize; i++) {
-            char c = stack.pop();
-            stack.push(c);
+            char c = move(stack, aux)
             System.out.print(c + " ");
         }
     }
