@@ -12,18 +12,19 @@ public class Queue {
     }
 
     public void enqueue(char c) {
-        if (size == 0) {
-            stack.push(c);
-            return;
-        }
-        CharStack oldStack = stack;
-        stack = new CharStack();
+//        if (size == 0) {
+//            stack.push(c);
+//            return;
+//        }
+//        CharStack oldStack = stack;
+//        stack = new CharStack();
         stack.push(c);
-        copyAllFrom(oldStack);
+//        copyAllFrom(oldStack);
         size ++ ;
     }
 
     public Character dequeue() {
+        
 
         size -- ;
         return null;
