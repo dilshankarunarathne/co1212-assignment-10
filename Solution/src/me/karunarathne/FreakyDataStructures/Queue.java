@@ -30,7 +30,7 @@ public class Queue {
         }
 
         size -- ;
-        return null;
+        return c;
     }
 
     public void display() {
