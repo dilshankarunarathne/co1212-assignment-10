@@ -1,4 +1,4 @@
-package me.karunarathne.ExpressionBalancing;
+package me.karunarathne.NormalDataStructures;
 
 public class CharQueue {
     private Node firstNode;
