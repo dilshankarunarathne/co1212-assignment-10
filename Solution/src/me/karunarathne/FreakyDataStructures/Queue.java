@@ -35,7 +35,7 @@ public class Queue {
 
     public void display() {
         CharStack aux = new CharStack();
-                
+
         int tempSize = stack.getSize();
         for (int i=0; i<tempSize; i++) {
             char c = stack.pop();
@@ -44,7 +44,9 @@ public class Queue {
         }
     }
 
-    private void move(CharStack from, CharStack to) {
-        to.push(from.pop());
+    private char move(CharStack from, CharStack to) {
+        char c = from.pop();
+        to.push(c);
+        return c;
     }
 }
