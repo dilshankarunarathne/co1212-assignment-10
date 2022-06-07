@@ -17,15 +17,15 @@ public class Queue {
     }
 
     public Character dequeue() {
-        int size = stack.getSize();
+        int tempSize = stack.getSize();
         CharStack aux = new CharStack();
-        for (int i=0; i<size-1; i++) {
+        for (int i=0; i<tempSize-1; i++) {
             move(stack, aux);
         }
         char c = stack.pop();
 
-        size = aux.getSize();
-        for (int i=0; i<size; i++) {
+        tempSize = aux.getSize();
+        for (int i=0; i<tempSize; i++) {
             move(aux, stack);
         }
 
@@ -34,8 +34,10 @@ public class Queue {
     }
 
     public void display() {
-        size = stack.getSize();
-        for (int i=0; i<size; i++) {
+        CharStack aux = new CharStack();
+                
+        int tempSize = stack.getSize();
+        for (int i=0; i<tempSize; i++) {
             char c = stack.pop();
             stack.push(c);
             System.out.print(c + " ");
