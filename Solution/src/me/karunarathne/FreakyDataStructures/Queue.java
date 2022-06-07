@@ -42,7 +42,9 @@ public class Queue {
             System.out.print(c + " ");
         }
 
-        stack = aux;
+        for (int i=0; i<tempSize; i++) {
+            char c = move(aux, stack);
+        }
     }
 
     private char move(CharStack from, CharStack to) {
