@@ -1,5 +1,4 @@
 package me.karunarathne.FreakyDataStructures;
 
-public class Main {
-
+public class Stack {
 }
