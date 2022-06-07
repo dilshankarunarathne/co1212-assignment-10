@@ -12,7 +12,7 @@ public class Stack {
     }
 
     public void push(char c) {
-        
+        queue.enqueue(c);
     }
 
     public Character pop() {
