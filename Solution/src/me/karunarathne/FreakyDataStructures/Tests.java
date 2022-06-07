@@ -1,6 +1,6 @@
 package me.karunarathne.FreakyDataStructures;
 
-public class Main {
+public class Tests {
     public static void main(String[] args) {
         newStackTests();
         newQueueTests();
