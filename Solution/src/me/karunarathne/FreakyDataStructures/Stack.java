@@ -20,35 +20,37 @@ public class Stack {
     }
 
     public void push(char c) {
-//        if (debug) System.out.println("push \t(" + c + ") -> " + this);
         queue.enqueue(c);
+        size = queue.getSize();
+        System.out.println("push \t\t(" + c + ") -> " + this);
+    }
+
+    public Character pop() {
+        size = queue.getSize();
+        int i = 0;
+        char ch;
+        while (true) {
+            if (i == size-1) {
+                ch = queue.dequeue();
+                break;
+            }
+            queue.enqueue(queue.dequeue());
+            i ++ ;
+        }
+        size = queue.getSize();
+        if (debug) System.out.println("pop  \t\t(" + ch + ") <- " + this);
+        return ch;
     }
 
 //    public Character pop() {
 //        size = queue.getSize();
 //        int i = 0;
-//        char ch;
 //        while (true) {
-//            if (i == size-1) {
-//                ch = queue.dequeue();
-//                break;
-//            }
+//            if (i == size-1) return queue.dequeue();
 //            queue.enqueue(queue.dequeue());
 //            i ++ ;
 //        }
-//        if (debug) System.out.println("dequeue \t(" + ch + ") <- " + this);
-//        return ch;
 //    }
-
-    public Character pop() {
-        size = queue.getSize();
-        int i = 0;
-        while (true) {
-            if (i == size-1) return queue.dequeue();
-            queue.enqueue(queue.dequeue());
-            i ++ ;
-        }
-    }
 
     @Override
     public String toString() {
@@ -57,8 +59,8 @@ public class Stack {
         size = queue.getSize();
         for (int i=0; i<size; i++) {
             char c = queue.dequeue();
+            queue.enqueue(c);
             s = s + c + " ";
-            System.out.print(c + " ");
         }
 
         s = s + "]";
