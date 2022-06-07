@@ -4,17 +4,19 @@ import me.karunarathne.NormalDataStructures.CharQueue;
 
 public class Stack {
     private final CharQueue queue;
+    private int size;
 
     public Stack() {
         queue = new CharQueue();
+        size = 0;
     }
 
     public void push(char c) {
-
+        
     }
 
     public Character pop() {
-        
+
         return null;
     }
 }

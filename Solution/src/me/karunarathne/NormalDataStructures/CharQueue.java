@@ -46,6 +46,10 @@ public class CharQueue {
         lastNode = null;
     }
 
+    public int getSize() {
+        return size;
+    }
+
     private static class Node {
         char data;
         Node next;
