@@ -17,13 +17,15 @@ public class Queue {
     }
 
     public Character dequeue() {
+        int size = stack.getSize();
         CharStack aux = new CharStack();
-        for (int i=0; i<stack.getSize(); i++) {
+        for (int i=0; i<size-1; i++) {
             move(stack, aux);
         }
         char c = stack.pop();
 
-        for (int i=0; i<aux.getSize(); i++) {
+        size = aux.getSize();
+        for (int i=0; i<size; i++) {
             move(aux, stack);
         }
 
