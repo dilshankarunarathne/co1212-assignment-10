@@ -10,6 +10,10 @@ public class Queue {
     }
 
     public void enqueue(char c) {
+
+    }
+
+    public Character dequeue() {
         
     }
 }
