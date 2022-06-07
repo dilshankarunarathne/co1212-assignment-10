@@ -1,3 +1,5 @@
+package me.karunarathne.NormalDataStructures;
+
 public class CharStack {
     private Node headNode;
     private int size;
