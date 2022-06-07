@@ -19,7 +19,7 @@ public class Stack {
         size = queue.getSize();
         int i = 0;
         while (true) {
-            if (i == size) return queue.dequeue();
+            if (i == size-1) return queue.dequeue();
             queue.enqueue(queue.dequeue());
             i ++ ;
         }
