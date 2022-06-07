@@ -13,6 +13,11 @@ public class Main {
         queue.enqueue('c');
         queue.enqueue('d');
         queue.enqueue('e');
+        queue.display();
+        System.out.println("-------");
+        queue.dequeue();
+        queue.dequeue();
+        queue.display();
     }
 
     private static void newStackTests() {

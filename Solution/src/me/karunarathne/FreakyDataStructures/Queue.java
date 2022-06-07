@@ -31,6 +31,15 @@ public class Queue {
         return null;
     }
 
+    public void display() {
+        size = stack.getSize();
+        for (int i=0; i<size; i++) {
+            char c = stack.pop();
+            stack.push(c);
+            System.out.print(c + " ");
+        }
+    }
+
     private void move(CharStack from, CharStack to) {
         to.push(from.pop());
     }
