@@ -13,5 +13,8 @@ public class Stack {
 
     }
 
-    
+    public Character pop() {
+        
+        return null;
+    }
 }
