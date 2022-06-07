@@ -14,6 +14,10 @@ public class Queue {
     }
 
     public Character dequeue() {
+
+    }
+
+    private void copyAllFrom(CharStack otherStack) {
         
     }
 }
