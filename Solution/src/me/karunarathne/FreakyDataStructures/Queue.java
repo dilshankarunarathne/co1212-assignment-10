@@ -12,6 +12,10 @@ public class Queue {
     }
 
     public void enqueue(char c) {
+        if (size == 0) {
+            stack.push(c);
+            return;
+        }
         CharStack oldStack = stack;
         stack = new CharStack();
         stack.push(c);
@@ -20,7 +24,7 @@ public class Queue {
     }
 
     public Character dequeue() {
-        
+
         size -- ;
         return null;
     }
