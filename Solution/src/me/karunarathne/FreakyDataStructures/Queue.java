@@ -18,17 +18,20 @@ public class Queue {
 
     public Character dequeue() {
         CharStack aux = new CharStack();
-        for (int i=0; i<size; i++) {
-            moveTo(aux);
+        for (int i=0; i<stack.getSize(); i++) {
+            move(stack, aux);
         }
         char c = stack.pop();
 
+        for (int i=0; i<aux.getSize(); i++) {
+            move(aux, stack);
+        }
 
         size -- ;
         return null;
     }
 
-    private void moveTo(CharStack otherStack) {
-        otherStack.push(stack.pop());
+    private void move(CharStack from, CharStack to) {
+        to.push(from.pop());
     }
 }

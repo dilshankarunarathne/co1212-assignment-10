@@ -33,6 +33,10 @@ public class CharStack {
         return temp;
     }
 
+    public int getSize() {
+        return size;
+    }
+
     private static class Node {
         char data;
         Node next;

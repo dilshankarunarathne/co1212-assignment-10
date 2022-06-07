@@ -2,7 +2,11 @@ package me.karunarathne.FreakyDataStructures;
 
 public class Main {
     public static void main(String[] args) {
-        newStackTests();
+//        newStackTests();
+        newQueueTests();
+    }
+
+    private static void newQueueTests() {
     }
 
     private static void newStackTests() {
