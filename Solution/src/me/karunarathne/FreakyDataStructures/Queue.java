@@ -12,25 +12,23 @@ public class Queue {
     }
 
     public void enqueue(char c) {
-//        if (size == 0) {
-//            stack.push(c);
-//            return;
-//        }
-//        CharStack oldStack = stack;
-//        stack = new CharStack();
         stack.push(c);
-//        copyAllFrom(oldStack);
         size ++ ;
     }
 
     public Character dequeue() {
-        
+        CharStack aux = new CharStack();
+        for (int i=0; i<size; i++) {
+            moveTo(aux);
+        }
+        char c = stack.pop();
+
 
         size -- ;
         return null;
     }
 
-    private void copyAllFrom(CharStack otherStack) {
-        stack.push(otherStack.pop());
+    private void moveTo(CharStack otherStack) {
+        otherStack.push(stack.pop());
     }
 }
